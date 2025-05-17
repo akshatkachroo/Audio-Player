@@ -1,0 +1,172 @@
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+
+int background(){
+	int j;
+	int x = 0;
+	int grainsize = 4;
+	int g_taskProcessed = 0;
+	for(j = 0; j < grainsize; j++){
+		g_taskProcessed++;
+	}
+	return x;
+}
+
+static void stimulus_in_ISR (void * context, alt_u32 id){
+	//write to an LED to verify ISR was entered
+	IOWR(LED_PIO_BASE, 0, 1);
+
+	//write response on then immediately off
+	IOWR(RESPONSE_OUT_BASE, 0, 1);
+	IOWR(RESPONSE_OUT_BASE, 0, 0);
+
+	//clear isr
+	IOWR(STIMULUS_IN_BASE, 3, 0);
+}
+
+int main(){
+  printf("Hello from Nios II!\n");
+  int pulse_width = 0;
+  int busy=-1;
+  int safe_bg_tasks = 0;
+  for (int period = 2; period <= 5000; period+=2){
+	  pulse_width = period / 2;
+
+	  IOWR(EGM_BASE, 2, period); //period
+	  IOWR(EGM_BASE, 3, pulse_width); //pulse width
+
+	  IOWR(EGM_BASE, 0, 1); //enable egm
+
+	  volatile int BG_task_call_count = 0;
+
+	  busy = (IORD(EGM_BASE, 1));
+
+	  //wait for first stimulus
+	  while( (!(IORD(STIMULUS_IN_BASE, 0))) && busy){
+		  busy = (IORD(EGM_BASE, 1));
+	  }
+	  printf("1stim \n");
+	  //toggle response
+	  IOWR(RESPONSE_OUT_BASE, 0, 1);
+	  IOWR(RESPONSE_OUT_BASE, 0, 0);
+
+	  //WAIT FOR IT TO BE 0
+	  while( ((IORD(STIMULUS_IN_BASE, 0))) && busy){
+		  BG_task_call_count++;
+		  background();
+		  busy = (IORD(EGM_BASE, 1));
+	  }
+	  //WAIT FOR IT TO BE 1
+	  while( (!(IORD(STIMULUS_IN_BASE, 0))) && busy){
+		  BG_task_call_count++;
+		  background();
+		  busy = (IORD(EGM_BASE, 1));
+	  }
+
+	  safe_bg_tasks = BG_task_call_count - 1;
+
+	  //main polling loop
+	  while(busy){
+		  if(IORD(STIMULUS_IN_BASE, 0)){
+			  //stimulus detected
+			  IOWR(RESPONSE_OUT_BASE, 0, 1);
+			  IOWR(RESPONSE_OUT_BASE, 0, 0);
+			  for(int j=0; j<safe_bg_tasks; j++){
+				  BG_task_call_count++;
+				  background();
+			  }
+
+			  IOWR(STIMULUS_IN_BASE, 0, 0);
+		  }
+		  busy = (IORD(EGM_BASE, 1));
+	  }
+
+	  int avglatency = IORD(EGM_BASE, 4);
+	  int missed = IORD(EGM_BASE, 5);
+	  int multi = IORD(EGM_BASE, 6);
+
+	  printf("%d, %d, %d, %d, %d, %d \n", period, pulse_width, BG_task_call_count, avglatency, missed, multi);
+
+	  IOWR(EGM_BASE, 0, 0); //disable
+  }
+
+
+
+//  int mode = -1;
+//  int buttons = 0;
+//  int pb0=0;
+
+//  while (1){
+//	  mode = IORD(SWITCH_PIO_BASE, 0);
+//	  mode &= 0b1;
+//	  pb0=0;
+//	  if (mode) {  //if switch = 1, tight polling
+//		  printf("Polling method selected.\n\nPeriod, Pulse_Width, BG_Tasks Run, Latency, Missed, Multiple.\n\nPlease, press PB0 to continue.\n");
+//		  pb0 = 0;
+//		  while (!pb0){
+//			  buttons = IORD(BUTTON_PIO_BASE,0);
+//			  pb0 = (~buttons) & 0b1;
+//		  }
+//		  tight_polling();
+//	  } else {
+//		  printf("Interrupt method selected.\n\nPeriod, Pulse_Width, BG_Tasks Run, Latency, Missed, Multiple.\n\nPlease, press PB0 to continue.\n");
+//		  pb0 = 0;
+//		  while (!pb0){
+//			  buttons = IORD(BUTTON_PIO_BASE,0);
+//			  pb0 = (~buttons) & 0b1;
+//		  }
+//		  interrupt();
+//	  }
+//  }
+  return 0;
+}
+
+void tight_polling (){
+	printf("polling");
+	return;
+}
+
+void interrupt (){
+	printf("interrupt");
+	//register ISR
+	alt_irq_register(STIMULUS_IN_IRQ, (void*)0, stimulus_in_ISR);
+
+	IOWR(EGM_BASE, 0, 0); //disable
+	int pulse_width = 0;
+	int busy = -1;
+
+	for (int period = 2; period <= 5000; period+=2){
+	  pulse_width = period / 2;
+
+	  IOWR(EGM_BASE, 2, period); //period
+	  IOWR(EGM_BASE, 3, pulse_width); //pulse width
+
+	  IOWR(EGM_BASE, 0, 1); //enable egm
+
+	  IOWR(STIMULUS_IN_BASE, 2, 1); //enable interrupt
+
+	  int BG_task_call_count = 0;
+
+	  busy = IORD(EGM_BASE, 1);
+
+	  while(busy){
+		  IOWR(LED_PIO_BASE, 0, 0);
+		  BG_task_call_count++;
+		  background();
+		  busy = IORD(EGM_BASE, 1);
+	  }
+
+
+	  int avglatency = IORD(EGM_BASE, 4);
+	  int missed = IORD(EGM_BASE, 5);
+	  int multi = IORD(EGM_BASE, 6);
+
+	  printf("%d, %d, %d, %d, %d, %d \n", period, pulse_width, BG_task_call_count, avglatency, missed, multi);
+
+	  IOWR(EGM_BASE, 0, 0); //disable
+  }
+	return;
+}
+

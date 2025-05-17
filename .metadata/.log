@@ -1,0 +1,1114 @@
+!SESSION 2024-09-19 15:25:08.067 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-09-19 15:26:26.336
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'N:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-09-19 15:26:28.689
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-19 15:29:28.153
+!MESSAGE Indexed 'Board_Diagnostics_bsp' (92 sources, 144 headers) in 1.91 sec: 4,240 declarations; 8,398 references; 112 unresolved inclusions; 6 syntax errors; 211 unresolved names (1.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-19 15:29:28.940
+!MESSAGE Indexed 'Board_Diagnostics' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 15:34:49.668
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 15:34:51.745
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Board_Diagnostics/Board_Diagnostics.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-09-19 15:38:39.604
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x103fde26", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-09-19 15:38:39.604
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x103fde26", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 15:44:47.404
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 15:44:49.498
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Board_Diagnostics/Board_Diagnostics.elf]
+!SESSION 2024-09-19 15:49:37.725 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-09-19 15:49:44.738
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 15:49:51.727
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 15:49:53.768
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Board_Diagnostics/Board_Diagnostics.elf]
+!SESSION 2024-09-19 15:56:03.784 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-09-19 15:56:08.428
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-19 15:59:49.949
+!MESSAGE Indexed 'Lab_0_Post_Lab_bsp' (92 sources, 174 headers) in 1.93 sec: 5,994 declarations; 10,830 references; 22 unresolved inclusions; 2 syntax errors; 79 unresolved names (0.47%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-19 15:59:50.627
+!MESSAGE Indexed 'Lab_0_Post_Lab' (1 sources, 21 headers) in 0.074 sec: 983 declarations; 1,599 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-19 16:03:02.575
+!MESSAGE Indexed 'Lab_0_Post_Lab_bsp' (92 sources, 170 headers) in 1.08 sec: 5,837 declarations; 10,502 references; 48 unresolved inclusions; 3 syntax errors; 115 unresolved names (0.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-19 16:03:02.998
+!MESSAGE Indexed 'Lab_0_Post_Lab' (1 sources, 0 headers) in 0.004 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:16:33.141
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:16:35.252
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:18:40.132
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:18:40.885
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:18:42.941
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:20:54.806
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:20:56.856
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:25:13.135
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:25:15.185
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:26:30.953
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:26:31.692
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:26:33.794
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:27:29.556
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:27:30.334
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:27:32.383
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:28:26.949
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:28:27.725
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-09-19 16:28:29.715
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+!SESSION 2024-10-03 12:44:11.641 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-03 12:44:20.691
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'N:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-10-03 12:44:23.199
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-03 12:55:02.070
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x2400", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-03 12:55:02.079
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x2400", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 12:55:29.449
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 12:55:31.539
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 12:56:00.644
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-03 12:56:07.267
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-03 12:56:07.268
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-03 12:56:22.457
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-03 12:56:22.458
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 12:57:00.600
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 12:57:02.687
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:01:50.783
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:01:52.813
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:04:08.352
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:04:10.415
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:04:17.874
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:04:18.663
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:04:20.749
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:09:52.663
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:09:53.411
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:09:55.406
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:10:12.637
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:10:13.408
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:10:15.417
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:11:39.295
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:11:40.022
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1726771948]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 13:11:42.112
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1726771948 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_0_Post_Lab/Lab_0_Post_Lab.elf]
+!SESSION 2024-10-03 13:54:04.803 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-03 13:54:05.551
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-03 13:54:10.562
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'N:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-10-03 13:54:10.653
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+!SESSION 2024-10-03 13:58:38.218 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-03 13:58:41.540
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'N:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-10-03 13:58:42.977
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-03 14:00:03.854
+!MESSAGE Indexed 'Lab_1_bsp' (92 sources, 169 headers) in 2.2 sec: 5,810 declarations; 10,597 references; 9 unresolved inclusions; 2 syntax errors; 35 unresolved names (0.21%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-03 14:00:04.538
+!MESSAGE Indexed 'Lab_1' (1 sources, 21 headers) in 0.05 sec: 983 declarations; 1,599 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.debug.core 4 103 2024-10-03 14:21:39.112
+!MESSAGE Project Lab_0_Post_Lab is closed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:25:55.165
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:25:57.241
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:26:15.974
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:26:16.748
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:26:18.811
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:26:26.395
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:26:27.165
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:26:29.251
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:31:46.434
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:31:47.213
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:31:49.240
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:32:06.032
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:32:06.826
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:32:08.883
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:37:12.933
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:37:13.759
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:37:15.841
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:38:05.995
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:38:06.832
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:38:08.942
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:39:50.760
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:39:52.794
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:40:05.432
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:40:06.220
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:40:08.307
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:40:17.854
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:40:18.637
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:40:20.677
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:54:23.440
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:54:24.198
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:54:26.243
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:55:23.925
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:55:24.693
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:55:26.806
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:57:02.400
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:57:03.188
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 14:57:05.258
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 15:46:04.929
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 15:46:05.762
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 15:46:07.792
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:04:30.116
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:04:30.869
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:04:32.906
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:06:03.767
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:06:04.539
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:06:06.583
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:10:05.955
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:10:06.742
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:10:08.827
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:10:54.930
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:10:56.965
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:15:02.753
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:15:04.786
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+!SESSION 2024-10-03 16:17:58.886 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-03 16:17:59.610
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-10-03 16:18:04.991
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-03 16:18:05.086
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'N:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:26:12.131
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:26:14.202
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:32:40.999
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:32:43.008
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:35:24.772
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:35:25.549
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:35:27.661
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:47:30.274
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 16:47:31.973
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:51:21.816
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:51:22.586
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:51:24.711
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:52:48.446
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:52:49.200
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:52:50.684
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:52:51.357
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:52:53.213
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:53:24.925
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:53:24.926
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:53:25.680
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:53:27.718
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:54:47.767
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:54:48.534
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:54:50.583
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:58:13.787
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:58:14.542
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:58:16.586
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:59:10.896
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:59:11.664
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 17:59:13.727
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:19:03.346
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:19:05.388
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:19:30.890
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:19:31.688
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:19:33.770
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:24:51.204
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:24:51.946
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:24:54.030
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:26:36.326
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:26:38.374
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:29:19.962
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:29:21.996
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:31:44.046
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:31:46.016
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:32:20.922
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:32:21.357
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:32:23.023
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:33:07.295
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:33:07.701
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:33:09.351
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:40:35.485
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:40:37.183
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:46:44.944
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:46:45.358
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 18:46:47.133
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+!SESSION 2024-10-03 21:56:20.757 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-03 21:56:25.268
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'N:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-10-03 21:56:26.616
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 21:56:53.640
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 21:56:55.751
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 22:24:21.436
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 22:24:22.216
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 22:24:24.270
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 22:25:04.439
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 22:25:06.471
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 22:25:30.793
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-03 22:25:32.877
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+!SESSION 2024-10-08 14:34:00.822 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/software/altera/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-08 14:34:03.135
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-08 14:34:12.237
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'N:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-10-08 14:34:12.469
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:34:41.821
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:34:43.841
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:43:58.894
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:43:59.683
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:44:01.728
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:49:24.153
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:49:24.933
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:49:26.714
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:53:28.535
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:53:28.930
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:53:30.572
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:56:46.354
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:56:46.769
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:56:48.465
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:58:32.913
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 14:58:34.566
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:01:44.004
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:01:44.429
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:01:46.217
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:16:16.440
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:16:16.961
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:16:18.655
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:23:49.160
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:23:50.838
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:31:08.134
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:31:09.809
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:32:16.070
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:32:17.785
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:39:24.211
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:39:25.928
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:43:22.319
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 15:43:24.031
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:08:27.316
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:08:27.721
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:08:29.476
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:14:52.460
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:14:54.137
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:15:06.459
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:15:08.126
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:19:10.296
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:19:11.978
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:25:11.190
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:25:11.596
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:25:13.293
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:27:45.400
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:27:47.065
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:28:34.103
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:28:34.504
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:28:36.220
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:32:50.055
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:32:51.761
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:35:30.225
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1001148 --id=0x0 --timestamp=1727977908]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-10-08 16:35:31.958
+!MESSAGE Executing: [C:/software/altera/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1001148 --id=0x0 --timestamp=1727977908 /cygdrive/c/Users/jl2yuan/ECE-224/LogicalStep/software/Lab_1/Lab_1.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-08 16:35:35.931
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-10-08 16:35:35.950
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

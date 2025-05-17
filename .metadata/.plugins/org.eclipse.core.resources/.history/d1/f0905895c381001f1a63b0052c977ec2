@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+
+int background(){
+	int j;
+	int x = 0;
+	int grainsize = 4;
+	int g_taskProcessed = 0;
+	for(j = 0; j < grainsize; j++){
+		g_taskProcessed++;
+	}
+	return x;
+}
+
+static void stimulus_in_ISR (void * context, alt_u32 id){
+	IOWR(LED_PIO_BASE, 0, 1);
+
+	IOWR(STIMULUS_IN_BASE, 3, 0); //clear isr
+}
+
+int main()
+{
+  printf("Hello from Nios II!\n");
+  //register ISR
+  alt_irq_register(STIMULUS_IN_IRQ, (void*)0, stimulus_in_ISR);
+
+  IOWR(EGM_BASE, 0, 0); //disable
+  int pulse_width = 0;
+
+  for (int period = 2; period <= 5000; period+=2){
+	  pulse_width = period / 2;
+
+	  IOWR(EGM_BASE, 2, period); //period
+	  IOWR(EGM_BASE, 3, pulse_width); //pulse width
+
+	  IOWR(EGM_BASE, 0, 1); //enable egm
+
+	  IOWR(STIMULUS_IN_BASE, 2, 1); //enable interrupt
+
+	  int BG_task_call_count = 0;
+
+	  while(1){
+		  printf("task: %d", BG_task_call_count);
+		  BG_task_call_count++;
+		  background();
+	  }
+
+	  //when busy is a 0, egm is done
+	  int busy = IORD(EGM_BASE, 1);
+
+	  IOWR(EGM_BASE, 0, 0); //disable
+  }
+
+
+
+//  int mode = -1;
+//  int buttons = 0;
+//  int pb0=0;
+
+//  while (1){
+//	  mode = IORD(SWITCH_PIO_BASE, 0);
+//	  mode &= 0b1;
+//	  pb0=0;
+//	  if (mode) {  //if switch = 1, tight polling
+//		  printf("Polling method selected.\n\nPeriod, Pulse_Width, BG_Tasks Run, Latency, Missed, Multiple.\n\nPlease, press PB0 to continue.\n");
+//		  pb0 = 0;
+//		  while (!pb0){
+//			  buttons = IORD(BUTTON_PIO_BASE,0);
+//			  pb0 = (~buttons) & 0b1;
+//		  }
+//		  tight_polling();
+//	  } else {
+//		  printf("Interrupt method selected.\n\nPeriod, Pulse_Width, BG_Tasks Run, Latency, Missed, Multiple.\n\nPlease, press PB0 to continue.\n");
+//		  pb0 = 0;
+//		  while (!pb0){
+//			  buttons = IORD(BUTTON_PIO_BASE,0);
+//			  pb0 = (~buttons) & 0b1;
+//		  }
+//		  interrupt();
+//	  }
+//  }
+  return 0;
+}
+
+void tight_polling (){
+	printf("polling");
+	return;
+}
+
+void interrupt (){
+	printf("interrupt");
+	return;
+}
+
